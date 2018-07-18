@@ -1,4 +1,4 @@
-from nose.tools import assert_equal, raises
+import pytest
 from mathy_things import fibonacci, factorial
 
 class TestFibonacci(object):
@@ -7,13 +7,13 @@ class TestFibonacci(object):
         for i in range(len(first_fibonacci)):
             assert_equal(fibonacci(i), first_fibonacci[i])
 
-    @raises(ValueError)
     def test_fibonacci_negative(self):
-        fibonacci(-1)
+        with pytest.raises(ValueError):
+            fibonacci(-1)
 
-    @raises(TypeError)
     def test_fibonacci_non_integer_input(self):
-        fibonacci(1.6)
+        with pytest.raises(TypeError):
+            fibonacci(1.6)
 
 class TestFactorial(object):
     def test_factorial_positive(self):
@@ -23,13 +23,14 @@ class TestFactorial(object):
         assert_equal(factorial(4), 24)
         assert_equal(factorial(5), 120)
 
-    @raises(ValueError)
     def test_factorial_negative(self):
-        factorial(-1)
+        with pytest.raises(ValueError):
+            factorial(-1)
 
     def test_factorial_zero(self):
         assert_equal(factorial(0), 1)
 
     @raises(TypeError)
     def test_factorial_non_integer_input(self):
-        factorial(2.6)
+        with pytest.raises(TypeError):
+            factorial(2.6)
