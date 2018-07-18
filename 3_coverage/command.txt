@@ -1,1 +1,2 @@
 nosetests --with-cover --cover-erase --cover-html --cover-html-dir cover
+py.test --cov=pretty_print_seconds --cov-report html:cover

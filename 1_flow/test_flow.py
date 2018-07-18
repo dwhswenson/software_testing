@@ -1,8 +1,8 @@
 
-def setup():
+def setup_module():
     print "Module-level setup"
 
-def teardown():
+def teardown_module():
     print "Module-level teardown"
 
 class TestClassA(object):
