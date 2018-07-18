@@ -1,29 +1,29 @@
 
 def setup_module():
-    print "Module-level setup"
+    print("Module-level setup")
 
 def teardown_module():
-    print "Module-level teardown"
+    print("Module-level teardown")
 
 class TestClassA(object):
     def setup(self):
-        print "  Class-level setup (A)"
+        print("  Class-level setup (A)")
 
     def teardown(self):
-        print "  Class-level teardown (A)"
+        print("  Class-level teardown (A)")
 
     def test_this(self):
-        print "    Running test (A1)"
+        print("    Running test (A1)")
 
     def test_that(self):
-        print "    Running test (A2)"
+        print("    Running test (A2)")
 
 class TestClassB(object):
     def setup(self):
-        print "  Class-level setup (B)"
+        print("  Class-level setup (B)")
 
     def teardown(self):
-        print "  Class-level teardown(B)"
+        print("  Class-level teardown(B)")
 
     def test_this(self):
-        print "    Running test"
+        print("    Running test")
