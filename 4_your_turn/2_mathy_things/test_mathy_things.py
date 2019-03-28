@@ -5,7 +5,7 @@ class TestFibonacci(object):
     def test_fibonacci_positive(self):
         first_fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34]
         for i in range(len(first_fibonacci)):
-            assert_equal(fibonacci(i), first_fibonacci[i])
+            assert fibonacci(i) == first_fibonacci[i]
 
     def test_fibonacci_negative(self):
         with pytest.raises(ValueError):
@@ -17,18 +17,18 @@ class TestFibonacci(object):
 
 class TestFactorial(object):
     def test_factorial_positive(self):
-        assert_equal(factorial(1), 1)
-        assert_equal(factorial(2), 2)
-        assert_equal(factorial(3), 6)
-        assert_equal(factorial(4), 24)
-        assert_equal(factorial(5), 120)
+        assert factorial(1) == 1
+        assert factorial(2) == 2
+        assert factorial(3) == 6
+        assert factorial(4) == 24
+        assert factorial(5) == 120
 
     def test_factorial_negative(self):
         with pytest.raises(ValueError):
             factorial(-1)
 
     def test_factorial_zero(self):
-        assert_equal(factorial(0), 1)
+        assert factorial(0) == 1
 
     @raises(TypeError)
     def test_factorial_non_integer_input(self):
