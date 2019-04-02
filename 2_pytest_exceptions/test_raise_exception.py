@@ -8,7 +8,7 @@ def test_function_raises_exception():
         function_raises_exception()
 
 def test_function_raises_exception_message():
-    with pytest.raises(RuntimeError, message="This function is in a bad mood"):
+    with pytest.raises(RuntimeError, match="This function is in a bad mood"):
         function_raises_exception()
 
 
