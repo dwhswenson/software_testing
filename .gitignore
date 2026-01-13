@@ -3,3 +3,7 @@
 *.cache
 *.pytest_cache
 code_for_pygmentize
+
+# pixi environments
+.pixi
+*.egg-info

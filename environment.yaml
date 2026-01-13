@@ -1,0 +1,10 @@
+name: software-testing
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - jupyterlab
+  - ipykernel
+  - pytest
+  - pytest-cov
+  - coverage

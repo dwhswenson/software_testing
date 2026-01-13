@@ -6,10 +6,10 @@ def teardown_module():
     print("Module-level teardown")
 
 class TestClassA(object):
-    def setup(self):
+    def setup_method(self):
         print("  Class-level setup (A)")
 
-    def teardown(self):
+    def teardown_method(self):
         print("  Class-level teardown (A)")
 
     def test_this(self):
@@ -19,10 +19,10 @@ class TestClassA(object):
         print("    Running test (A2)")
 
 class TestClassB(object):
-    def setup(self):
+    def setup_method(self):
         print("  Class-level setup (B)")
 
-    def teardown(self):
+    def teardown_method(self):
         print("  Class-level teardown(B)")
 
     def test_this(self):

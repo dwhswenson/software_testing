@@ -10,8 +10,3 @@ def test_function_raises_exception():
 def test_function_raises_exception_message():
     with pytest.raises(RuntimeError, match="This function is in a bad mood"):
         function_raises_exception()
-
-
-def test_that_has_not_been_written():
-    pytest.skip()
-
