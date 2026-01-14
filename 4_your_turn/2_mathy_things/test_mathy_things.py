@@ -30,7 +30,6 @@ class TestFactorial(object):
     def test_factorial_zero(self):
         assert factorial(0) == 1
 
-    @raises(TypeError)
     def test_factorial_non_integer_input(self):
         with pytest.raises(TypeError):
             factorial(2.6)
