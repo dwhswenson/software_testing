@@ -1,4 +1,4 @@
-This directory contains a simple skeleton of a test file using nose. The
+This directory contains a simple skeleton of a test file using pytest. The
 purpose of this is to illustrate how you set up a test module, and how it
 runs in practice.
 
