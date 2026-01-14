@@ -2,7 +2,7 @@ name: software-testing
 channels:
   - conda-forge
 dependencies:
-  - python
+  - python >=3.12
   - jupyterlab
   - ipykernel
   - pytest
